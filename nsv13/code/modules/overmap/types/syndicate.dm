@@ -503,13 +503,13 @@
 	bound_width = 128
 	bound_height = 128
 	damage_states = FALSE
-	max_weapon_range = 85
-	obj_integrity = 5000
-	max_integrity = 5000
+	max_weapon_range = 80
+	obj_integrity = 5500
+	max_integrity = 5500
 	speed_limit = 16
 	flak_battery_amount = 3
 	max_tracking_range = 90
-	armor = list("overmap_light" = 99, "overmap_medium" = 65, "overmap_heavy" = 40)
+	armor = list("overmap_light" = 99, "overmap_medium" = 75, "overmap_heavy" = 55)
 	ai_controlled = TRUE
 	shots_left = 500
 	missiles = 30
@@ -541,19 +541,21 @@
 			victorious_mob.client.give_award(/datum/award/achievement/misc/fist_breaker, victorious_mob)
 	return ..()
 
-/obj/structure/overmap/hostile/ai/alicorn
-	name = "SGV Alicorn"
-	desc = "One Billion Lives!"
-	icon = 'nsv13/icons/overmap/alicorn.dmi'
-	icon_state = "alicorn"
-	faction = "hostile"
+/obj/structure/overmap/hostile/ai/bellsofdawn
+	name = "SGV Bells of Dawn"
+	desc = "For us, they come, to destroy our home..."
+	icon = 'nsv13/icons/overmap/defectorphalanx.dmi'
+	icon_state = "bellsofdawn"
+	faction = "defector_phalanx"
 	mass = MASS_LARGE
 	sprite_size = 128
 	damage_states = FALSE
+	max_weapon_range = 100
+	max_tracking_range = 150
 	bound_width = 128
 	bound_height = 128
-	obj_integrity = 4750
-	max_integrity = 4750
+	obj_integrity = 5000
+	max_integrity = 5000
 	cloak_factor = 100
 	shots_left = 350
 	torpedoes = 60
@@ -567,11 +569,11 @@
 	torpedo_type = /obj/item/projectile/guided_munition/torpedo/hellfire
 	flak_battery_amount = 3
 
-/obj/structure/overmap/hostile/ai/alicorn/Initialize(mapload)
+/obj/structure/overmap/hostile/ai/bellsofdawn/Initialize(mapload)
 	. = ..()
 	handle_cloak(TRUE)
 
-/obj/structure/overmap/hostile/ai/alicorn/apply_weapons()
+/obj/structure/overmap/hostile/ai/bellsofdawn/apply_weapons()
 	weapon_types[FIRE_MODE_AMS] = new /datum/ship_weapon/vls(src)
 	weapon_types[FIRE_MODE_TORPEDO] = new /datum/ship_weapon/torpedo_launcher(src)
 	weapon_types[FIRE_MODE_GAUSS] = new /datum/ship_weapon/quadgauss(src)
@@ -579,18 +581,18 @@
 	weapon_types[FIRE_MODE_FLAK] = new /datum/ship_weapon/flak(src)
 
 /obj/structure/overmap/hostile/ai/fighter
-	name = "Rattlesnake Strike fighter"
-	icon = 'nsv13/icons/overmap/alicorn.dmi'
-	icon_state = "alifighter"
+	name = "/improper Rattlesnake Strike fighter"
+	icon = 'nsv13/icons/overmap/defectorphalanx.dmi'
+	icon_state = "dawnfighter"
 	damage_states = FALSE
 	mass = MASS_TINY
 	ai_controlled = TRUE
 	ai_behaviour = AI_AGGRESSIVE
 	weapon_safety = FALSE
 	faction = "hostile"
-	armor = list("overmap_light" = 10, "overmap_medium" = 5, "overmap_heavy" = 95)
-	obj_integrity = 115
-	max_integrity = 115 //Slightly less squishy!
+	armor = list("overmap_light" = 5, "overmap_medium" = 20, "overmap_heavy" = 98)
+	obj_integrity = 130
+	max_integrity = 130 //Slightly less squishy!
 	ai_flags = AI_FLAG_SWARMER
 	bound_width = 32
 	bound_height = 32
