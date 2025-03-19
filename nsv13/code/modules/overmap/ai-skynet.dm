@@ -912,26 +912,27 @@ Adding tasks is easy! Just define a datum for it.
 	taunts = list("Your assault on Rubicon only served to distract you from the real threat. It's time to end this war in one swift blow.")
 	fleet_trait = FLEET_TRAIT_DEFENSE
 
+//Boss Ships
+
 /datum/fleet/syndicate/fistofsol_boss
-	name = "SSV Fist of Sol"
+	name = "\proper SSV Fist of Sol"
 	faction = FACTION_ID_SYNDICATE
 	size = 1
 	allow_difficulty_scaling = FALSE
 	battleship_types = list(/obj/structure/overmap/syndicate/ai/fistofsol)
 	supply_types = list(/obj/structure/overmap/syndicate/ai/carrier/elite)
-	taunts = list("What a pleasure that we should meet again. I hope you won't disappoint!")
+	taunts = list("The stars will shake with the weight of your failure today, scum.", "The galaxy will turn over a thousand times before your wreckage is found.", "The Syndicate will not be defeated by you... *comedians.*", "All batteries, wipe these pests from our stars!")
 	fleet_trait = FLEET_TRAIT_DEFENSE
 
-/datum/fleet/hostile/alicorn_boss
-	name = "\proper SGV Alicorn"
+/datum/fleet/hostile/bellsofdawn_boss
+	name = "\proper SGV Bells of Dawn"
 	size = 1
 	hide_movements = TRUE
 	allow_difficulty_scaling = FALSE
-	fighter_types = list(/obj/structure/overmap/hostile/ai/fighter)
-	supply_types = list(/obj/structure/overmap/hostile/ai/alicorn)
-	taunts = list("A powerful ship, a powerful gun, powerful ammunition. The graceful slaughter of a billion lives to save billions more, you'll be the first of many.")
+	fighter_types = list(/obj/structure/overmap/hostile/ai/dawnfighter)
+	supply_types = list(/obj/structure/overmap/hostile/ai/bellsofdawn)
+	taunts = list("*For us, they come, to destroy our home...*")
 	fleet_trait = FLEET_TRAIT_DEFENSE
-
 
 //Nanotrasen fleets
 
