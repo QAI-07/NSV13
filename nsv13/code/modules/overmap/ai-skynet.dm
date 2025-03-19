@@ -924,13 +924,13 @@ Adding tasks is easy! Just define a datum for it.
 	taunts = list("The stars will shake with the weight of your failure today, scum.", "The galaxy will turn over a thousand times before your wreckage is found.", "The Syndicate will not be defeated by you... *comedians.*", "All batteries, wipe these pests from our stars!")
 	fleet_trait = FLEET_TRAIT_DEFENSE
 
-/datum/fleet/hostile/bellsofdawn_boss
+/datum/fleet/defector/bellsofdawn_boss
 	name = "\proper SGV Bells of Dawn"
 	size = 1
 	hide_movements = TRUE
 	allow_difficulty_scaling = FALSE
-	fighter_types = list(/obj/structure/overmap/hostile/ai/dawnfighter)
-	supply_types = list(/obj/structure/overmap/hostile/ai/bellsofdawn)
+	fighter_types = list(/obj/structure/overmap/defector/ai/dawnfighter)
+	supply_types = list(/obj/structure/overmap/defector/ai/bellsofdawn)
 	taunts = list("*For us, they come, to destroy our home...*")
 	fleet_trait = FLEET_TRAIT_DEFENSE
 
