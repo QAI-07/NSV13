@@ -929,7 +929,7 @@ Adding tasks is easy! Just define a datum for it.
 	size = 1
 	hide_movements = TRUE
 	allow_difficulty_scaling = FALSE
-	fighter_types = list(/obj/structure/overmap/defector/ai/dawnfighter)
+	fighter_types = list(/obj/structure/overmap/defector/ai/fighter)
 	supply_types = list(/obj/structure/overmap/defector/ai/bellsofdawn)
 	taunts = list("*For us, they come, to destroy our home...*")
 	fleet_trait = FLEET_TRAIT_DEFENSE
