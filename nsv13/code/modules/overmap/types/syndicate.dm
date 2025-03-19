@@ -68,7 +68,7 @@
 	. = ..()
 	name = "[name] ([rand(0,999)])"
 
-/obj/structure/overmap/hostile/ai/fighter/Initialize()
+/obj/structure/overmap/defector/ai/fighter/Initialize()
 	. = ..()
 	name = "[name] ([rand(0,999)])"
 
@@ -541,7 +541,7 @@
 			victorious_mob.client.give_award(/datum/award/achievement/misc/fist_breaker, victorious_mob)
 	return ..()
 
-/obj/structure/overmap/hostile/ai/bellsofdawn
+/obj/structure/overmap/defector/ai/bellsofdawn
 	name = "SGV Bells of Dawn"
 	desc = "For us, they come, to destroy our home..."
 	icon = 'nsv13/icons/overmap/defectorphalanx.dmi'
@@ -565,22 +565,22 @@
 	ai_flags = AI_FLAG_BATTLESHIP | AI_FLAG_ELITE
 	combat_dice_type = /datum/combat_dice/carrier
 	ai_can_launch_fighters = TRUE
-	ai_fighter_type = list(/obj/structure/overmap/hostile/ai/fighter)
+	ai_fighter_type = list(/obj/structure/overmap/defector/ai/fighter)
 	torpedo_type = /obj/item/projectile/guided_munition/torpedo/hellfire
 	flak_battery_amount = 3
 
-/obj/structure/overmap/hostile/ai/bellsofdawn/Initialize(mapload)
+/obj/structure/overmap/defector/ai/bellsofdawn/Initialize(mapload)
 	. = ..()
 	handle_cloak(TRUE)
 
-/obj/structure/overmap/hostile/ai/bellsofdawn/apply_weapons()
+/obj/structure/overmap/defector/ai/bellsofdawn/apply_weapons()
 	weapon_types[FIRE_MODE_AMS] = new /datum/ship_weapon/vls(src)
 	weapon_types[FIRE_MODE_TORPEDO] = new /datum/ship_weapon/torpedo_launcher(src)
 	weapon_types[FIRE_MODE_GAUSS] = new /datum/ship_weapon/quadgauss(src)
 	weapon_types[FIRE_MODE_MAC] = new /datum/ship_weapon/prototype_bsa(src)
 	weapon_types[FIRE_MODE_FLAK] = new /datum/ship_weapon/flak(src)
 
-/obj/structure/overmap/hostile/ai/fighter
+/obj/structure/overmap/defector/ai/fighter
 	name = "/improper Rattlesnake Strike fighter"
 	icon = 'nsv13/icons/overmap/defectorphalanx.dmi'
 	icon_state = "dawnfighter"
@@ -589,7 +589,7 @@
 	ai_controlled = TRUE
 	ai_behaviour = AI_AGGRESSIVE
 	weapon_safety = FALSE
-	faction = "hostile"
+	faction = "defector"
 	armor = list("overmap_light" = 5, "overmap_medium" = 20, "overmap_heavy" = 98)
 	obj_integrity = 130
 	max_integrity = 130 //Slightly less squishy!
@@ -601,7 +601,7 @@
 	combat_dice_type = /datum/combat_dice/fighter
 	torpedo_type = /obj/item/projectile/guided_munition/torpedo/disruptor
 
-/obj/structure/overmap/hostile/ai/fighter/apply_weapons()
+/obj/structure/overmap/defector/ai/fighter/apply_weapons()
 	weapon_types[FIRE_MODE_ANTI_AIR] = new/datum/ship_weapon/light_cannon(src)
 	weapon_types[FIRE_MODE_MISSILE] = new/datum/ship_weapon/missile_launcher(src)
 	weapon_types[FIRE_MODE_TORPEDO] = new /datum/ship_weapon/torpedo_launcher(src)
