@@ -548,7 +548,7 @@
 	icon_state = "bellsofdawn"
 	faction = "defector_phalanx"
 	mass = MASS_LARGE
-	sprite_size = 128
+	sprite_size = 64
 	damage_states = FALSE
 	max_weapon_range = 100
 	max_tracking_range = 150
@@ -562,7 +562,7 @@
 	ai_controlled = TRUE
 	armor = list("overmap_light" = 99, "overmap_medium" = 70, "overmap_heavy" = 65)
 	can_resupply = TRUE
-	ai_flags = AI_FLAG_BATTLESHIP | AI_FLAG_ELITE
+	ai_flags = AI_FLAG_DESTROYER | AI_FLAG_ELITE
 	combat_dice_type = /datum/combat_dice/carrier
 	ai_can_launch_fighters = TRUE
 	ai_fighter_type = list(/obj/structure/overmap/defector/ai/fighter)
@@ -581,7 +581,7 @@
 	weapon_types[FIRE_MODE_FLAK] = new /datum/ship_weapon/flak(src)
 
 /obj/structure/overmap/defector/ai/fighter
-	name = "/improper Rattlesnake Strike fighter"
+	name = "Rattlesnake Strike fighter"
 	icon = 'nsv13/icons/overmap/defectorphalanx.dmi'
 	icon_state = "dawnfighter"
 	damage_states = FALSE
